@@ -12,6 +12,6 @@
     "typescript": "^3.6.4"
   },
   "scripts": {
-    "start": "babel ABC075 --out-dir dist"
+    "start": ""
   }
 }
