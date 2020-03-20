@@ -16,7 +16,7 @@ function writeFile(path, text) {
 }
 
 const problems = ["A", "B", "C", "D", "E", "F"];
-const initialText = `"use strict;"
+const initialText = `"use strict";
 main(require("fs").readFileSync("/dev/stdin", "UTF-8").trim().split("\\n"));
 function main(input) {};`;
 
