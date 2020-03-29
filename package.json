@@ -1,0 +1,14 @@
+{
+  "name": "AtCoder",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/taiki-fw/AtCoder.git",
+  "author": "taiki-fw <taiki_52@outlook.jp>",
+  "license": "MIT",
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "jest": "^25.2.3"
+  }
+}
