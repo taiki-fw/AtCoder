@@ -41,4 +41,27 @@ const encode = str => {
   return resultStr;
 };
 
-module.exports = { encode };
+const decode = str => {
+  if (typeof str !== "string") throw new Error("文字列を引数に渡して下さい。");
+
+  str = str.replace(/(?<=\d+[a-zA-Z]+)/g, "/");
+  str = str.split("/");
+  for (let i = 0; i < str.length - 1; i++) {
+    while (str[i + 1].length === 1 && str.length > i + 1) {
+      str[i] += str[i + 1];
+      str.splice(i + 1, 1);
+    }
+  }
+
+  let result = "";
+
+  for (let i = 0; i < str.length; i++) {
+    let num = parseInt(str[i], 10);
+    if (num < 0) result += str[i].replace(/[^a-zA-Z]/g, "");
+    else result += str[i].replace(/[^a-zA-Z]/g, "").repeat(num);
+  }
+
+  return result;
+};
+
+module.exports = { encode, decode };
